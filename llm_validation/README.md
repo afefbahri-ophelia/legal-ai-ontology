@@ -2,35 +2,66 @@
 
 This directory contains the resources used for semantic validation of ontology axioms using multiple Large Language Models (LLMs).
 
-## Validation Setup
+## Validation Dataset
 
-A set of 96 interpretable TBox axioms extracted from the cleaned ontology was independently evaluated by four LLMs:
+The file `semantic_axioms_four_models.csv` contains the semantic validation results for the selected ontology axioms.
 
-* Qwen3-4B
-* Llama 3.2-3B
-* Phi-4-mini
-* Gemma 3-4B
+Each record contains:
 
-Each model evaluated the semantic plausibility of the same ontology axioms using a common validation protocol.
+* `axiom_id` — identifier of the validated axiom.
+* `type` — type of ontology axiom, such as `subClassOf`, `domain`, or `range`.
+* `subject` — subject of the ontology axiom.
+* `subject_label_en` — English label of the subject.
+* `subject_label_ar` — Arabic label of the subject.
+* `relation` — semantic relation expressed by the axiom.
+* `object` — object of the ontology axiom.
+* `object_label_en` — English label of the object.
+* `object_label_ar` — Arabic label of the object.
+* `question` — natural-language interpretation of the axiom.
+* `question_en` — English version of the question.
+* `question_ar` — Arabic version of the question.
+* `qwen3_4b_response` — semantic judgment produced by Qwen3-4B.
+* `Llama3.2-3B` — semantic judgment produced by Llama 3.2-3B.
+* `Phi-4-mini` — semantic judgment produced by Phi-4-mini.
+* `Gemma 3-4B` — semantic judgment produced by Gemma 3-4B.
 
-## Validation Configurations
+## Validation Task
 
-Two prompt configurations are documented in the `prompts/` directory:
+Each LLM evaluates whether the semantic relationship expressed by an ontology axiom is conceptually plausible.
 
-* Axiom Only — the formal ontology axiom is provided to the model.
-* Axiom + Natural-Language Question — the formal axiom is provided together with its natural-language interpretation.
+The predefined semantic judgments are:
 
-The validation task uses three predefined responses:
+* `YES` — the relationship is considered semantically plausible.
+* `NO` — the relationship is considered semantically implausible.
+* `UNCERTAIN` — the available information is insufficient for a reliable judgment.
 
-* YES
-* NO
-* UNCERTAIN
+The models independently evaluate the same ontology axioms.
 
-Responses outside these categories are retained separately and are not converted into semantic judgments.
+## Example
 
-## Contents
+For the axiom:
 
-* `semantic_axioms_four_models.csv` — validation results produced by the four LLMs.
+```text
+AdministrativeDocument
+rdfs:subClassOf
+OfficialDocument
+```
 
-The individual model judgments are retained to support cross-LLM agreement analysis and the identification of semantic hotspots.
+the corresponding natural-language question is:
 
+```text
+Is Administrative Document a type of Official Document?
+```
+
+The four model responses are retained in separate columns in the CSV.
+
+## Purpose
+
+The collected judgments are used to analyze:
+
+* agreement and disagreement between independent LLM validators;
+* semantic stability of ontology axioms;
+* consensus across models;
+* axioms exhibiting substantial disagreement, which are considered candidates for semantic hotspot analysis.
+
+The validation results are retained at the individual model level to preserve the original independent judgments.
