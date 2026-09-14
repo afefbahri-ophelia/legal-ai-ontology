@@ -2,8 +2,8 @@
 
 This directory contains the ontology versions used in the study:
 
-* `core_ontology`: expert-defined starting ontology.
-* `enriched_ontology`: ontology after LLM-based enrichment.
-* `merged_full_ontology`: cleaned and integrated ontology used for validation.
+* `core_ontology.ttl` — expert-defined starting ontology.
+* `enriched_ontology.ttl` — ontology after LLM-based enrichment.
+* `cleaned_ontology.ttl` — cleaned and integrated ontology used for semantic validation.
 
-Both Turtle (`.ttl`) and CSV (`.csv`) representations are provided for convenience.
+All ontology resources are provided in Turtle (`.ttl`) format.
