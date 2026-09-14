@@ -1,0 +1,389 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<AdministrativeDocument> rdfs:label "الوثيقة الإدارية"@ar,
+        "Administrative Document"@en ;
+    <subClassOf> <OfficialDocument> .
+
+<ClosedDailyLog> rdfs:label "سجل يومي مغلق"@ar,
+        "Closed Daily Log"@en ;
+    <subClassOf> <DailyLogState> .
+
+<CompletelyClosed> rdfs:label "CompletelyClosed"@ar,
+        "CompletelyClosed"@en ;
+    <subClassOf> <DailyLogState> .
+
+<CourtClerkDocument> rdfs:label "وثيقة مساعد القضاء"@ar,
+        "Court Clerk Document"@en ;
+    <subClassOf> <OfficialDocument> .
+
+<CourtStampedDocument> rdfs:label "الوثيقة المختومة بختم المحكمة"@ar,
+        "Court Stamped Document"@en ;
+    <subClassOf> <JudicialDocument> .
+
+<IdentifySignatures> rdfs:label "التعريف بالإمضاءات"@ar,
+        "Identify Signatures"@en ;
+    <domain> <AuthorizedParty> ;
+    <range> <ContractingParty> .
+
+<LandSurveyDocument> rdfs:label "وثيقة ديوان قيس الأراضي"@ar,
+        "Land Survey Document"@en ;
+    <subClassOf> <OfficialDocument> .
+
+<LogDistributionToRegionalDirector> rdfs:label "توزيع المدونات على المدير الجهوي"@ar,
+        "Distribution of Logs to Regional Director"@en ;
+    <domain> <DailyLogDistribution> ;
+    <range> <RegionalDirector> .
+
+<ManagesReceiptDailyLog> rdfs:label "يتولى إجراءات يومية الرهون"@ar,
+        "Manages Receipt Daily Log"@en ;
+    <domain> <RegionalDirector> ;
+    <range> <ReceiptDailyLog> .
+
+<StampingOfDailyLogOfMortgages> rdfs:label "ختم يومية الرهون"@ar,
+        "Stamping of Daily Log of Mortgages"@en ;
+    <domain> <ApprovalOfOrderDailyLog> ;
+    <range> <DailyLogDistribution> .
+
+<UnderReview> rdfs:label "تحت المراجعة"@ar,
+        "Under Review"@en ;
+    <subClassOf> <RegistrationDailyLog> .
+
+<VerifyApostilleStamp> rdfs:label "التحقق من ختم الأبوستي"@ar,
+        "Verify Apostille Stamp"@en ;
+    <domain> <ApostilleStamp> ;
+    <range> <RealEstateTransaction> .
+
+<VerifyOfficialStatus> rdfs:label "التثبت من الصبغة الرسمية"@ar,
+        "Verify Official Status"@en ;
+    <domain> <Examiner> ;
+    <range> <OfficialDocument> .
+
+<assignedToReviewer> rdfs:label "تم إسناده إلى المراجع"@ar,
+        "Assigned To Reviewer"@en ;
+    <domain> <RegistrationApplication> ;
+    <range> <Reviewer> .
+
+<authenticatesOwnershipCertificate> rdfs:label "يصادق على شهادة الملكية"@ar,
+        "authenticates Ownership Certificate"@en ;
+    <domain> <AdministrativeAuthority>,
+        <JudicialAuthority> ;
+    <range> <OwnershipCertificate> .
+
+<authorizedBy> rdfs:label "مفوض من قبل"@ar,
+        "Authorized By"@en ;
+    <domain> <AuthorizedParty> ;
+    <range> <registryKeeper> .
+
+<composedOf> rdfs:label "مكون من"@ar,
+        "composed of"@en ;
+    <domain> <LandTitle> ;
+    <range> <PartiallyDividedRealEstate>,
+        <RealEstateTransaction> .
+
+<coreComponentOf> rdfs:label "جزء أساسي من"@ar,
+        "core component of"@en ;
+    <range> <RegistrationDailyLog> .
+
+<deputize> rdfs:label "ينوب عن"@ar,
+        "deputizes"@en ;
+    <domain> <RegionalDirector> ;
+    <range> <RegionalDirector> .
+
+<distributeLogsByFolders> rdfs:label "توزيع المدوّنات حسب المجلدات"@ar,
+        "Distribute Logs by Folders"@en ;
+    <domain> <DailyLogDistribution> ;
+    <range> <LogFolder> .
+
+<extractions> rdfs:label "Extractions"@ar,
+        "Extractions"@en ;
+    <subClassOf> <LogFolder> .
+
+<handleRegistrationRequest> rdfs:label "يتولى معالجة طلب الترسيم"@ar,
+        "Handles Registration Request"@en ;
+    <domain> <DailyLogState>,
+        <ReceiptDailyLog>,
+        <RegionalDirector> ;
+    <range> <AcceptedRegistrationRequest>,
+        <RegistrationRequest>,
+        <RejectedRegistrationRequest> .
+
+<handleRegistrationRequests> rdfs:label "يتعامل مع طلبات الترسيم"@ar,
+        "handles Registration Requests"@en ;
+    <domain> <RegionalDirector> ;
+    <range> <AcceptedRegistrationRequest>,
+        <RejectedRegistrationRequest> .
+
+<hasApplication> rdfs:label "له طلب"@ar,
+        "has Application"@en ;
+    <domain> <RegistrationDailyLog> .
+
+<hasContractRegistrationException> rdfs:label "لديه استثناء على إشهار العقد"@ar,
+        "has Contract Registration Exception"@en ;
+    <domain> <Contract> ;
+    <range> <ContractRegistrationException> .
+
+<hasContractStartTime> rdfs:label "لديه وقت بدء سريان"@ar,
+        "has Contract Start Time"@en ;
+    <domain> <Contract> ;
+    <range> <ContractStartTime> .
+
+<hasContractTerminationCondition> rdfs:label "له شرط فسخ"@ar,
+        "has Contract Termination Condition"@en ;
+    <domain> <ContractTermination> ;
+    <range> <RegistrationRecord> .
+
+<hasDate> rdfs:label "تاريخ"@ar,
+        "Date"@en ;
+    <domain> <SaleContract> ;
+    <range> <RegistrationDate>,
+        <dateTime> .
+
+<hasEndTime> rdfs:label "لديه تاريخ انتهاء"@ar,
+        "has End Time"@en ;
+    <domain> <DailyLogState> ;
+    <range> <dateTime> .
+
+<hasExemptionFromClearance> rdfs:label "له إعفاء من شهادة في رفع اليد"@ar,
+        "has Exemption from Clearance"@en ;
+    <domain> <Validator> ;
+    <range> <ExemptionFromClearanceDocument> .
+
+<hasRegistrationRecord> rdfs:label "لديه سجل تسجيل"@ar,
+        "has Registration Record"@en ;
+    <domain> <PropertyTransfer>,
+        <Validator> ;
+    <range> <RegistrationRecord> .
+
+<hasRequiresCentralBankLicense> rdfs:label "لديه يتطلب رخصة من البنك المركزي"@ar,
+        "has Requires Central Bank License"@en ;
+    <domain> <RegistrationRecord> ;
+    <range> <RequiresCentralBankLicense> .
+
+<hasSignatureAuthority> rdfs:label "لها سلطة الإمضاء"@ar,
+        "has Signature Authority"@en ;
+    <domain> <OfficialDocument> ;
+    <range> <SignatureAuthority> .
+
+<hasStartTime> rdfs:label "has start time"@ar,
+        "has start time"@en ;
+    <domain> <DailyLogState>,
+        <LegalDocument> ;
+    <range> <dateTime> .
+
+<hasWaiveOfRightCertificate> rdfs:label "لديه شهادة في رفع اليد"@ar,
+        "has Waive of Right Certificate"@en ;
+    <domain> <RegistrationRecord> ;
+    <range> <WaiveOfRightCertificate> .
+
+<identifySignatures> rdfs:label "التعريف بالإمضاءات"@ar,
+        "Identify Signatures"@en ;
+    <domain> <AuthorizedParty> ;
+    <range> <LandTitle> .
+
+<isConsideredMissing> rdfs:label "يعتبر مفقودا"@ar,
+        "is Considered Missing"@en ;
+    <domain> <MissingPerson> ;
+    <range> <MissingPerson> .
+
+<isExemptFromLicense> rdfs:label "غير خاضعة لترخيص"@ar,
+        "is Exempt from License"@en ;
+    <domain> <PropertyTransferContract> ;
+    <range> <LicensingAuthority> .
+
+<isExemptedFromRegistration> rdfs:label "is exempted from registration"@ar,
+        "is exempted from registration"@en ;
+    <domain> <LegalDocument> ;
+    <range> <ContractRegistration> .
+
+<isInvalid> rdfs:label "يكون باطلاً"@ar,
+        "is Invalid"@en ;
+    <domain> <HandwrittenSaleContract> ;
+    <range> <InvalidityReason> .
+
+<manages> rdfs:label "يتولى"@ar,
+        "manages"@en ;
+    <domain> <OrderDailyLogManagement> ;
+    <range> <OrderDailyLog> .
+
+<mortgagesAndAttachments> rdfs:label "Mortgages and Attachments"@ar,
+        "Mortgages and Attachments"@en ;
+    <subClassOf> <LogFolder> .
+
+<regularOperations> rdfs:label "Regular Operations"@ar,
+        "Regular Operations"@en ;
+    <subClassOf> <LogFolder> .
+
+<requiresLegalProcedures> rdfs:label "يتطلب إجراءات قانونية"@ar,
+        "requires Legal Procedures"@en ;
+    <domain> <PropertyRegimeChange> ;
+    <range> <PropertyRegimeChange> .
+
+<verifyOfficialStatus> rdfs:label "التأكد من الصبغة الرسمية"@ar,
+        "Verify Official Status"@en ;
+    <domain> <LandRegistrationApplication> ;
+    <range> <OfficialIdentificationDocument> .
+
+<AdministrativeAuthority> rdfs:label "السلطة الإدارية"@ar,
+        "Administrative Authorities"@en .
+
+<ApostilleStamp> rdfs:label "ختم الأبوستي"@ar,
+        "Apostille Stamp"@en .
+
+<ApprovalOfOrderDailyLog> rdfs:label "إعتماد سجل اليومي للرهون"@ar,
+        "Approval of Order Daily Log"@en .
+
+<ContractRegistration> rdfs:label "Contract Registration"@ar,
+        "Contract Registration"@en .
+
+<ContractRegistrationException> rdfs:label "استثناءات على إشهار العقود"@ar,
+        "Contract Registration Exceptions"@en .
+
+<ContractStartTime> rdfs:label "وقت بدء سريان العقد"@ar,
+        "Contract Start Time"@en .
+
+<ContractTermination> rdfs:label "فسخ العقود"@ar,
+        "Contract Termination"@en .
+
+<ContractingParty> rdfs:label "الطرف المتعاقد"@ar,
+        "Contracting Party"@en .
+
+<Examiner> rdfs:label "Examiner"@ar,
+        "Examiner"@en .
+
+<ExemptionFromClearanceDocument> rdfs:label "إعفاء من شهادة في رفع اليد"@ar,
+        "Exemption from Clearance Certificate"@en .
+
+<HandwrittenSaleContract> rdfs:label "عقد البيع بخط اليد"@ar,
+        "Handwritten Sale Contract"@en .
+
+<InvalidityReason> rdfs:label "InvalidityReason"@ar,
+        "InvalidityReason"@en .
+
+<JudicialAuthority> rdfs:label "الهيئة القضائية"@ar,
+        "Judicial Authority"@en .
+
+<JudicialDocument> rdfs:label "الوثيقة القضائية"@ar,
+        "Judicial Document"@en ;
+    <subClassOf> <OfficialDocument> .
+
+<LandRegistrationApplication> rdfs:label "مطلب الترسيم"@ar,
+        "Land Registration Application"@en .
+
+<LicensingAuthority> rdfs:label "LicensingAuthority"@ar,
+        "LicensingAuthority"@en .
+
+<OfficialIdentificationDocument> rdfs:label "الوثائق الرسمية المعتمدة للتعريف بالإمضاء"@ar,
+        "Official Identification Document"@en .
+
+<OrderDailyLog> rdfs:label "يومية الرهون"@ar,
+        "Mortgage Daily Log"@en ;
+    <subClassOf> <DailyLogState> .
+
+<OrderDailyLogManagement> rdfs:label "إدارة يومية الرهون"@ar,
+        "Management of Mortgage Daily Log"@en .
+
+<OwnershipCertificate> rdfs:label "شهادة الملكية"@ar,
+        "Ownership Certificate"@en .
+
+<PartiallyDividedRealEstate> rdfs:label "العقار المفرز أو على الشياع"@ar,
+        "Partially Divided Real Estate"@en .
+
+<PropertyTransferContract> rdfs:label "عقود التفويت أو توظيف الحقوق العينية"@ar,
+        "Property Transfer Contract"@en .
+
+<RegistrationApplication> rdfs:label "طلب الترسيم"@ar,
+        "Registration Application"@en .
+
+<RegistrationDate> rdfs:label "تاريخ الترسيم"@ar,
+        "Registration Date"@en ;
+    <domain> <SaleContract> ;
+    <range> <date>,
+        <dateTime> .
+
+<RegistrationRequest> rdfs:label "طلب الترسيم"@ar,
+        "Registration Request"@en .
+
+<RequiresCentralBankLicense> rdfs:label "يتطلب الحصول على رخصة من البنك المركزي"@ar,
+        "Requires Central Bank License"@en ;
+    <subClassOf> <PropertyTransfer> .
+
+<Reviewer> rdfs:label "الجهة المراجعة"@ar,
+        "Reviewer"@en .
+
+<SignatureAuthority> rdfs:label "سلطة الإمضاء"@ar,
+        "Signature Authority"@en .
+
+<WaiveOfRightCertificate> rdfs:label "شهادة في رفع اليد"@ar,
+        "Waive of Right Certificate"@en .
+
+<date> rdfs:label "date"@ar,
+        "date"@en .
+
+<registryKeeper> rdfs:label "حافظ الملكية العقارية"@ar,
+        "Registry Keeper"@en .
+
+<AcceptedRegistrationRequest> rdfs:label "طلب ترسيم مقبول"@ar,
+        "Accepted Registration Request"@en .
+
+<Contract> rdfs:label "Contract"@ar,
+        "Contract"@en .
+
+<LandTitle> rdfs:label "سند الملكية العقارية"@ar,
+        "Land Title"@en .
+
+<LegalDocument> rdfs:label "Legal Document"@ar,
+        "Legal Document"@en .
+
+<MissingPerson> rdfs:label "مفقود"@ar,
+        "Missing Person"@en .
+
+<PropertyRegimeChange> rdfs:label "تغيير نظام الأملاك"@ar,
+        "Property Regime Change"@en .
+
+<PropertyTransfer> rdfs:label "تفويت العقار"@ar,
+        "Property Transfer"@en .
+
+<RealEstateTransaction> rdfs:label "المعاملة العقارية"@ar,
+        "Real Estate Transaction"@en .
+
+<ReceiptDailyLog> rdfs:label "سجل اليومي للاستلام"@ar,
+        "Receipt Daily Log"@en ;
+    <subClassOf> <DailyLogState> .
+
+<RejectedRegistrationRequest> rdfs:label "طلب ترسيم مرفوض"@ar,
+        "Rejected Registration Request"@en .
+
+<SaleContract> rdfs:label "عقد البيع"@ar,
+        "Sale Contract"@en .
+
+<Validator> rdfs:label "المصادق"@ar,
+        "Validator"@en .
+
+<AuthorizedParty> rdfs:label "الجهات المخولة"@ar,
+        "Authorized Parties"@en .
+
+<DailyLogDistribution> rdfs:label "Daily Log Distribution"@ar,
+        "Daily Log Distribution"@en .
+
+<RegistrationDailyLog> rdfs:label "يومية الترسيم"@ar,
+        "Registration Daily Log"@en ;
+    <subClassOf> <DailyLogState> .
+
+<LogFolder> rdfs:label "Log Folder"@ar,
+        "Log Folder"@en .
+
+<RegistrationRecord> rdfs:label "السجل العقاري"@ar,
+        "Registration Record"@en .
+
+<dateTime> rdfs:label "dateTime"@ar,
+        "dateTime"@en .
+
+<OfficialDocument> rdfs:label "الوثيقة الرسمية"@ar,
+        "Official Document"@en .
+
+<RegionalDirector> rdfs:label "المدير الجهوي"@ar,
+        "Regional Director"@en .
+
+<DailyLogState> rdfs:label "حالة يومية الترسيم"@ar,
+        "Daily Log State"@en .
+

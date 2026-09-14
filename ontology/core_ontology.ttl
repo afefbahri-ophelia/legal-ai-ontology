@@ -1,0 +1,1489 @@
+@prefix ex: <http://example.org/land-registry#> .
+@prefix ns1: <http://example.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///Users/afefbahri/n934c7a3adcdf445b82673ac0400b98d0b1> a owl:Restriction ;
+    rdfs:label "n934c7a3adcdf445b82673ac0400b98d0b1"@en ;
+    owl:onProperty ex:approveRegistrationDailyLog ;
+    owl:someValuesFrom ex:ClosureOfRegistrationDailyLog .
+
+<file:///Users/afefbahri/n934c7a3adcdf445b82673ac0400b98d0b2> a ex:LandTitleCopy ;
+    rdfs:label "n934c7a3adcdf445b82673ac0400b98d0b2"@en .
+
+<file:///Users/afefbahri/n934c7a3adcdf445b82673ac0400b98d0b3> a owl:Restriction ;
+    rdfs:label "n934c7a3adcdf445b82673ac0400b98d0b3"@en ;
+    owl:onProperty ex:hasDate ;
+    owl:someValuesFrom ex:dateTime .
+
+<file:///Users/afefbahri/n934c7a3adcdf445b82673ac0400b98d0b4> a owl:Restriction ;
+    rdfs:label "n934c7a3adcdf445b82673ac0400b98d0b4"@en ;
+    owl:onProperty ex:hasDate ;
+    owl:type owl:Class .
+
+<file:///Users/afefbahri/n934c7a3adcdf445b82673ac0400b98d0b5> a owl:Restriction ;
+    rdfs:label "n934c7a3adcdf445b82673ac0400b98d0b5"@en ;
+    owl:allValuesFrom ex:AdministrativeAuthority ;
+    owl:onProperty ex:issuedBy .
+
+<file:///Users/afefbahri/n934c7a3adcdf445b82673ac0400b98d0b6> a owl:Restriction ;
+    rdfs:label "n934c7a3adcdf445b82673ac0400b98d0b6"@en ;
+    owl:allValuesFrom ex:AdministrativeAuthority ;
+    owl:onProperty ex:issuedBy .
+
+ns1:ApplicationDispatch a owl:Class ;
+    rdfs:label "ApplicationDispatch"@en ;
+    ns1:type ns1:Class .
+
+ns1:ApprovalOfOrderDailyLog a owl:Class ;
+    rdfs:label "ApprovalOfOrderDailyLog"@en ;
+    ns1:type ns1:Class .
+
+ns1:ClosedDailyLog a owl:Class ;
+    rdfs:label "ClosedDailyLog"@en ;
+    ns1:subClassOf ns1:DailyLogState ;
+    ns1:type ns1:Class .
+
+ns1:ClosureOfReceiptDailyLog a owl:Class ;
+    rdfs:label "ClosureOfReceiptDailyLog"@en ;
+    ns1:type ns1:Class .
+
+ns1:ClosureOfRegistrationDailyLog a owl:Class ;
+    rdfs:label "ClosureOfRegistrationDailyLog"@en ;
+    ns1:type ns1:Class .
+
+ns1:CompletelyClosed a owl:Class ;
+    rdfs:label "CompletelyClosed"@en ;
+    ns1:subClassOf ns1:DailyLogState ;
+    ns1:type ns1:Class .
+
+ns1:ExaminerRecord a owl:Class ;
+    rdfs:label "ExaminerRecord"@en ;
+    ns1:type ns1:Class .
+
+ns1:FinalClosureOfRegistrationDailyLog a owl:Class ;
+    rdfs:label "FinalClosureOfRegistrationDailyLog"@en ;
+    ns1:type ns1:Class .
+
+ns1:LandTitleCopy a owl:Class ;
+    rdfs:label "LandTitleCopy"@en ;
+    ns1:type ns1:Class .
+
+ns1:OrderDailyLog a owl:Class ;
+    rdfs:label "OrderDailyLog"@en ;
+    ns1:subClassOf ns1:DailyLogState ;
+    ns1:type ns1:Class .
+
+ns1:OwnershipCertificate a owl:Class ;
+    rdfs:label "OwnershipCertificate"@en ;
+    ns1:type ns1:Class .
+
+ns1:ReceiptDailyLog a owl:Class ;
+    rdfs:label "ReceiptDailyLog"@en ;
+    ns1:subClassOf ns1:DailyLogState ;
+    ns1:type ns1:Class .
+
+ns1:ReviewerRecord a owl:Class ;
+    rdfs:label "ReviewerRecord"@en ;
+    ns1:type ns1:Class .
+
+ns1:ServiceApplication a owl:Class ;
+    rdfs:label "ServiceApplication"@en ;
+    ns1:type ns1:Class .
+
+ns1:UnderReview a owl:Class ;
+    rdfs:label "UnderReview"@en ;
+    ns1:subClassOf ns1:RegistrationDailyLog ;
+    ns1:type ns1:Class .
+
+ns1:assignedToExaminer a owl:Class ;
+    rdfs:label "assignedToExaminer"@en ;
+    ns1:domain ns1:RegistrationApplication ;
+    ns1:range ns1:Examiner ;
+    ns1:type ns1:ObjectProperty .
+
+ns1:assignedToReviewer a owl:Class ;
+    rdfs:label "assignedToReviewer"@en ;
+    ns1:domain ns1:RegistrationApplication ;
+    ns1:range ns1:Reviewer ;
+    ns1:type ns1:ObjectProperty .
+
+ns1:assignedToValidator a owl:Class ;
+    rdfs:label "assignedToValidator"@en ;
+    ns1:domain ns1:RegistrationApplication ;
+    ns1:range ns1:Validator ;
+    ns1:type ns1:ObjectProperty .
+
+ns1:composedOf a owl:Class ;
+    rdfs:label "composedOf"@en ;
+    ns1:domain ns1:LandTitle ;
+    ns1:range ns1:RealEstateTransaction ;
+    ns1:type ns1:ObjectProperty .
+
+ns1:coreComponentOf a owl:Class ;
+    rdfs:label "coreComponentOf"@en ;
+    ns1:domain ns1:RegistrationRecord ;
+    ns1:range ns1:RegistrationDailyLog ;
+    ns1:type ns1:ObjectProperty .
+
+ns1:hasDate a owl:Class ;
+    rdfs:label "hasDate"@en ;
+    ns1:domain ns1:RegistryDailyLog ;
+    ns1:range ns1:dateTime ;
+    ns1:type ns1:DatatypeProperty .
+
+ns1:hasEndTime a owl:Class ;
+    rdfs:label "hasEndTime"@en ;
+    ns1:domain ns1:DailyLogState ;
+    ns1:range ns1:dateTime ;
+    ns1:type ns1:DatatypeProperty .
+
+ns1:hasRegistrationRecord a owl:Class ;
+    rdfs:label "hasRegistrationRecord"@en ;
+    ns1:domain ns1:Validator ;
+    ns1:range ns1:RegistrationRecord ;
+    ns1:type ns1:ObjectProperty .
+
+ns1:hasStartTime a owl:Class ;
+    rdfs:label "hasStartTime"@en ;
+    ns1:domain ns1:DailyLogState ;
+    ns1:range ns1:dateTime ;
+    ns1:type ns1:DatatypeProperty .
+
+ns1:resultsFrom a owl:Class ;
+    rdfs:label "resultsFrom"@en ;
+    ns1:domain ns1:RealEstateTransaction ;
+    ns1:range ns1:RegistrationRecord ;
+    ns1:type ns1:ObjectProperty .
+
+ns1:stateOf a owl:Class ;
+    rdfs:label "stateOf"@en ;
+    ns1:domain ns1:DailyLogState ;
+    ns1:range ns1:RegistryDailyLog ;
+    ns1:type ns1:ObjectProperty .
+
+ex:AdministrativeBody a owl:Class ;
+    rdfs:label "Administrative Body",
+        "الهيئة الإدارية",
+        "Administrative Body"@en .
+
+ex:AdministrativeDocument a owl:Class ;
+    rdfs:label "Administrative Document",
+        "الوثيقة الإدارية",
+        "AdministrativeDocument"@en ;
+    rdfs:subClassOf ex:OfficialDocument .
+
+ex:ApplicationDispatch a owl:Class ;
+    rdfs:label "Application Dispatch",
+        "طلب الخدمة",
+        "ApplicationDispatch"@en ;
+    ex:hasDocumentVerification ex:DocumentVerification ;
+    ex:hasRecordStamping ex:RecordStamping ;
+    ex:hasRegistrationDetails ex:RegistrationDetails ;
+    rdfs:comment "البيانات الواجب التحقق منها في مطلب الخدمة قبل ختم اليومية" .
+
+ex:ApprovalDecisionOnDivision a owl:Class ;
+    rdfs:label "Approval Decision On Division",
+        "قرار مصادقة على تقسيم",
+        "ApprovalDecisionOnDivision"@en .
+
+ex:CertificateOfPropertyTypeCange a owl:Class ;
+    rdfs:label "Certificate of Property Type Change",
+        "شهادة في تغيير صبغة عقار",
+        "CertificateOfPropertyTypeCange"@en .
+
+ex:Certificates a owl:Class ;
+    rdfs:label "Certificates",
+        "الشهائد",
+        "Certificates"@en .
+
+ex:ClosedDailyLog a owl:Class ;
+    rdfs:label "Closed Daily Log",
+        "سجل يومي مغلق",
+        "ClosedDailyLog"@en ;
+    ex:subClassOf ex:DailyLogState ;
+    ex:type ex:Class ;
+    rdfs:subClassOf ex:DailyLogState .
+
+ex:ClosureOfReceiptDailyLog a owl:Class ;
+    rdfs:label "Closure of Receipt Daily Log",
+        "ختم يومية الرهون",
+        "ClosureOfReceiptDailyLog"@en ;
+    ex:hasLandRegistrationContractDetails ex:LandRegistrationContractDetails ;
+    rdfs:comment "الخطوات المتبعة لختم يومية الرهون في السجل العقاري" .
+
+ex:CompletelyClosed a owl:Class ;
+    rdfs:label "CompletelyClosed"@en ;
+    rdfs:subClassOf ex:DailyLogState .
+
+ex:CourtClerkDocument a owl:Class ;
+    rdfs:label "Court Clerk Document",
+        "وثيقة مساعد القضاء",
+        "CourtClerkDocument"@en ;
+    rdfs:subClassOf ex:OfficialDocument .
+
+ex:CourtStampedDocument a owl:Class ;
+    rdfs:label "Court Stamped Document",
+        "الوثيقة المختومة بختم المحكمة",
+        "CourtStampedDocument"@en ;
+    rdfs:subClassOf ex:JudicialDocument .
+
+ex:DistributionOfRegistrationLogBooks a owl:Class ;
+    rdfs:label "Distribution of Registration Log Books",
+        "توزيع مدوّنات الترسيم",
+        "DistributionOfRegistrationLogBooks"@en ;
+    ex:hasType ex:Extractions,
+        ex:Mortgages,
+        ex:NormalOperations ;
+    rdfs:comment "The different types of log books that are distributed to the regional director or his representative after the review of the registration requests is completed." .
+
+ex:EngineeringPlans a owl:Class ;
+    rdfs:label "Engineering Plans",
+        "الأمثلة الهندسية الناقلة للملكية",
+        "Engineering Plans"@en .
+
+ex:ExaminerRecord a owl:Class ;
+    rdfs:label "Examiner Record",
+        "سجل الفاحص",
+        "سجل الفاحص"@ar,
+        "ExaminerRecord"@en .
+
+ex:FinalClosureOfRegistrationDailyLog a owl:Class ;
+    rdfs:label "Final Closure of Registration Daily Log",
+        "ختم اليومية الختامي للترسيم",
+        "ختم اليومية الختامي للترسيم"@ar,
+        "FinalClosureOfRegistrationDailyLog"@en ;
+    ex:hasType ex:Mortgages ;
+    rdfs:comment "The final step in the daily registration process where the registration daily log is officially closed." .
+
+ex:IdentifySignatures a owl:ObjectProperty ;
+    rdfs:label "Identify Signatures",
+        "التعريف بالإمضاءات",
+        "IdentifySignatures"@en ;
+    rdfs:domain ex:AuthorizedParty ;
+    rdfs:range ex:ContractingParty .
+
+ex:JudicialBody a owl:Class ;
+    rdfs:label "Judicial Body",
+        "الهيئة القضائية",
+        "الهيئة القضائية"@ar,
+        "JudicialBody"@en .
+
+ex:JudicialOfficer a owl:Class ;
+    rdfs:label "Judicial Officer",
+        "مساعد القضاء",
+        "مساعد القضاء"@ar,
+        "JudicialOfficer"@en .
+
+ex:LandRegistrationContract a owl:Class ;
+    rdfs:label "Land Registration Contract",
+        "عقد تسجيل الأراضي",
+        "عقد تسجيل الأراضي"@ar,
+        "LandRegistrationContract"@en .
+
+ex:LandSurveyDocument a owl:Class ;
+    rdfs:label "Land Survey Document",
+        "وثيقة ديوان قيس الأراضي",
+        "وثيقة ديوان قيس الأراضي"@ar,
+        "LandSurveyDocument"@en ;
+    rdfs:subClassOf ex:OfficialDocument .
+
+ex:LandSurveyOffice a owl:Class ;
+    rdfs:label "Land Survey Office",
+        "ديوان قيس الأراضي والمسح العقاري",
+        "LandSurveyOffice"@en .
+
+ex:LegalizedDocument a owl:Class ;
+    rdfs:label "Legalized Document",
+        "الوثيقة المصادق عليها",
+        "Legalized Document"@en ;
+    rdfs:comment "الوثائق الصادرة عن السلط الأجنبية التي تخضع لإجراء المصادقة أو الأبوستي" .
+
+ex:LogDistributionToRegionalDirector a owl:ObjectProperty ;
+    rdfs:label "Distribution of Logs to Regional Director",
+        "توزيع المدونات على المدير الجهوي",
+        "LogDistributionToRegionalDirector"@en ;
+    rdfs:domain ex:DailyLogDistribution ;
+    rdfs:range ex:RegionalDirector .
+
+ex:ManagesReceiptDailyLog a owl:ObjectProperty ;
+    rdfs:label "Manages Receipt Daily Log",
+        "يتولى إجراءات يومية الرهون",
+        "ManagesReceiptDailyLog"@en ;
+    rdfs:domain ex:RegionalDirector ;
+    rdfs:range ex:ReceiptDailyLog .
+
+ex:OfficialAdministrativeAuthority a owl:Class ;
+    rdfs:label "Official Administrative Authority",
+        "الهيئة الإدارية الرسمية",
+        "OfficialAdministrativeAuthority"@en .
+
+ex:OfficialStampAndSignature a owl:ObjectProperty ;
+    rdfs:label "Official Stamp and Signature",
+        "الختم والإمضاء الرسمي",
+        "OfficialStampAndSignature"@en ;
+    ex:domain ex:OfficialIdentificationDocument ;
+    ex:range ex:RegistrationAuthority .
+
+ex:PropertyRegistrationDocument a owl:Class ;
+    rdfs:label "Property Registration Documents",
+        "وثائق ترسيم العقارات",
+        "PropertyRegistrationDocument"@en ;
+    ex:hasOfficialStatus "true" ;
+    ex:issuedBy ex:AdministrativeAuthority .
+
+ex:Protocols a owl:Class ;
+    rdfs:label "Protocols",
+        "المحاضر",
+        "المحاضر"@ar,
+        "Protocols"@en .
+
+ex:RegistrationDailyLogVerification a owl:Class ;
+    rdfs:label "Registration Daily Log Verification",
+        "تحقيق في يومية الرهون",
+        "RegistrationDailyLogVerification"@en ;
+    rdfs:comment "المراحل التي يتم خلالها المصادقة على ختم يومية الرهون" .
+
+ex:RegistrationOperation a owl:Class ;
+    rdfs:label "Type of Operation",
+        "نوع العملية",
+        "نوع العملية"@ar,
+        "RegistrationOperation"@en ;
+    rdfs:comment "الأنواع المختلفة للعمليات التي يتم المصادقة عليها عند ختم يومية الرهون" ;
+    rdfs:subClassOf "n934c7a3adcdf445b82673ac0400b98d0b1" .
+
+ex:RequestToRegisterExpropriation a owl:Class ;
+    rdfs:label "Request to Register Expropriation",
+        "مطلب في ترسيم أمر إنتزاع",
+        "RequestToRegisterExpropriation"@en .
+
+ex:ReviewerRecord a owl:Class ;
+    rdfs:label "ReviewerRecord"@en ;
+    ex:hasOfficialDocument ex:OfficialDocument .
+
+ex:ServiceApplicationVerification a owl:Class ;
+    rdfs:label "Service Application Verification",
+        "Service Application Verification"@ar,
+        "ServiceApplicationVerification"@en ;
+    rdfs:comment "التحقق من البيانات المطلوبة عند دراسة مطلب الخدمة (ServiceApplication) المقدم للترسيم" .
+
+ex:SignatureReadingReport a owl:Class ;
+    rdfs:label "Signature Reading Report",
+        "محضر تلاوة التوقيع",
+        "SignatureReadingReport"@en ;
+    rdfs:comment "محضر التلاوة يجب أن يكون مطابقا للنموذج الملحق بمنشور السيد الوزير الأول عدد 33 المؤرخ في 16 جوان 1995" .
+
+ex:SignatureVerification a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:label "Signature Verification",
+        "التثبت من صبغة الإمضاء",
+        "التحقق من صبغة الإمضاء",
+        "تحقق التوقيع",
+        "SignatureVerification"@en ;
+    ex:domain ex:RealEstateRegistration ;
+    ex:range ex:OfficialDocument ;
+    rdfs:comment "الشروط القانونية التي يجب استيفاؤها عند تلاوة نص الكتب على الشخص المعني بالإمضاء" .
+
+ex:StampingOfDailyLogOfMortgages a owl:ObjectProperty ;
+    rdfs:label "Stamping of Daily Log of Mortgages",
+        "ختم يومية الرهون",
+        "StampingOfDailyLogOfMortgages"@en ;
+    rdfs:domain ex:ApprovalOfOrderDailyLog ;
+    rdfs:range ex:DailyLogDistribution .
+
+ex:UnderReview a owl:Class ;
+    rdfs:label "Under Review",
+        "تحت المراجعة",
+        "قيد المراجعة",
+        "تحت المراجعة"@ar,
+        "UnderReview"@en ;
+    rdfs:subClassOf ex:RegistrationDailyLog .
+
+ex:VerifyApostilleStamp a owl:ObjectProperty ;
+    rdfs:label "Verify Apostille Stamp",
+        "التحقق من ختم الأبوستي",
+        "Verify Apostille Stamp"@en ;
+    rdfs:domain ex:ApostilleStamp ;
+    rdfs:range ex:RealEstateTransaction .
+
+ex:VerifyOfficialStatus a owl:ObjectProperty ;
+    rdfs:label "Verify Official Status",
+        "التثبت من الصبغة الرسمية",
+        "التثبت من الصبغة الرسمية"@ar,
+        "VerifyOfficialStatus"@en ;
+    rdfs:domain ex:Examiner ;
+    rdfs:range ex:OfficialDocument .
+
+ex:VerifyOwnership a owl:Class ;
+    rdfs:label "Verify Ownership",
+        "التأكد من ملكية المتعامل",
+        "VerifyOwnership"@en ;
+    ex:composedOf ex:LandRegistration ;
+    rdfs:comment "الحالات التي يجب فيها التأكد من ملكية المتعامل لجميع العقار قبل الترسيم في السجل العقاري" .
+
+ex:assignedToExaminer a owl:ObjectProperty ;
+    rdfs:label "Assigned to Examiner",
+        "مسند إلى المحقق",
+        "assignedToExaminer"@en ;
+    ex:domain ex:ApostilleVerification,
+        ex:RegistrationApplication ;
+    ex:range ex:Examiner .
+
+ex:assignedToReviewer a owl:ObjectProperty ;
+    rdfs:label "Assigned To Reviewer",
+        "Assigned to Reviewer",
+        "assigned to Reviewer",
+        "assigned to reviewer",
+        "تم إسناده إلى المراجع",
+        "تم تعيينه للمراجع",
+        "تم تكليفه للمراجعة",
+        "assignedToReviewer"@en ;
+    ex:domain ex:RegistrationApplication ;
+    ex:range ex:Reviewer ;
+    rdfs:domain ex:RegistrationApplication ;
+    rdfs:range ex:Reviewer .
+
+ex:assignedToValidator a owl:ObjectProperty ;
+    rdfs:label "assigned to Validator",
+        "مسند إلى المصادق",
+        "مسند إلى المصادق"@ar,
+        "assignedToValidator"@en ;
+    ex:domain ex:RegistrationApplication ;
+    ex:range ex:Validator .
+
+ex:authenticatesOwnershipCertificate a owl:ObjectProperty ;
+    rdfs:label "authenticates Ownership Certificate",
+        "يصادق على شهادة الملكية",
+        "authenticatesOwnershipCertificate"@en ;
+    rdfs:domain ex:AdministrativeAuthority,
+        ex:JudicialAuthority ;
+    rdfs:range ex:OwnershipCertificate .
+
+ex:authorizedBy a owl:ObjectProperty ;
+    rdfs:label "Authorized By",
+        "مفوض من قبل",
+        "authorizedBy"@en ;
+    rdfs:domain ex:AuthorizedParty ;
+    rdfs:range ex:registryKeeper .
+
+ex:cancelledBasedOnClearanceDocument a owl:ObjectProperty ;
+    rdfs:label "cancelled based on Clearance Document",
+        "تم التشطيب عليه استنادًا إلى شهادة رفع اليد",
+        "cancelledBasedOnClearanceDocument"@en .
+
+ex:composedOf a owl:ObjectProperty ;
+    rdfs:label "composed of",
+        "مكون من",
+        "يتكون من",
+        "composedOf"@en ;
+    rdfs:domain ex:LandTitle ;
+    rdfs:range ex:PartiallyDividedRealEstate,
+        ex:RealEstateTransaction .
+
+ex:coreComponentOf a owl:ObjectProperty ;
+    rdfs:label "core component of",
+        "جزء أساسي من",
+        "جزء أساسي من"@ar,
+        "coreComponentOf"@en ;
+    ex:domain ex:RegistrationRecord ;
+    ex:range ex:RegistrationDailyLog ;
+    rdfs:range ex:RegistrationDailyLog .
+
+ex:deputize a owl:ObjectProperty ;
+    rdfs:label "deputizes",
+        "ينوب عن",
+        "deputize"@en ;
+    rdfs:domain ex:RegionalDirector ;
+    rdfs:range ex:RegionalDirector .
+
+ex:distributeLogsByFolders a owl:ObjectProperty ;
+    rdfs:label "Distribute Logs by Folders",
+        "توزيع المدوّنات حسب المجلدات",
+        "توزيع المدوّنات حسب المجلدات"@ar,
+        "distributeLogsByFolders"@en ;
+    rdfs:domain ex:DailyLogDistribution ;
+    rdfs:range ex:LogFolder .
+
+ex:forwardAcceptedFiles a owl:ObjectProperty ;
+    rdfs:label "Forward Accepted Files",
+        "إحالة الملفات المقبولة",
+        "forwardAcceptedFiles"@en .
+
+ex:handleRegistrationRequest a owl:ObjectProperty ;
+    rdfs:label "Handles Registration Request",
+        "handles Registration Request",
+        "يتولى معالجة طلب الترسيم",
+        "handleRegistrationRequest"@en ;
+    rdfs:domain ex:DailyLogState,
+        ex:ReceiptDailyLog,
+        ex:RegionalDirector ;
+    rdfs:range ex:AcceptedRegistrationRequest,
+        ex:RegistrationRequest,
+        ex:RejectedRegistrationRequest .
+
+ex:handleRegistrationRequests a owl:ObjectProperty ;
+    rdfs:label "handles Registration Requests",
+        "يتعامل مع طلبات الترسيم",
+        "handleRegistrationRequests"@en ;
+    rdfs:domain ex:RegionalDirector ;
+    rdfs:range ex:AcceptedRegistrationRequest,
+        ex:RejectedRegistrationRequest .
+
+ex:hasApplicant a owl:ObjectProperty ;
+    rdfs:label "has Applicant",
+        "لديه مقدم الطلب",
+        "لديه مقدم الطلب"@ar,
+        "hasApplicant"@en .
+
+ex:hasApplication a owl:ObjectProperty ;
+    rdfs:label "has Application",
+        "له طلب",
+        "hasApplication"@en ;
+    rdfs:domain ex:RegistrationDailyLog .
+
+ex:hasContractRegistrationException a owl:ObjectProperty ;
+    rdfs:label "has Contract Registration Exception",
+        "لديه استثناء على إشهار العقد",
+        "لديه استثناء على إشهار العقد"@ar,
+        "hasContractRegistrationException"@en ;
+    rdfs:domain ex:Contract ;
+    rdfs:range ex:ContractRegistrationException .
+
+ex:hasContractStartTime a owl:ObjectProperty ;
+    rdfs:label "has Contract Start Time",
+        "لديه وقت بدء سريان",
+        "hasContractStartTime"@en ;
+    rdfs:domain ex:Contract ;
+    rdfs:range ex:ContractStartTime .
+
+ex:hasContractTerminationCondition a owl:ObjectProperty ;
+    rdfs:label "has Contract Termination Condition",
+        "له شرط فسخ",
+        "له شرط فسخ"@ar,
+        "hasContractTerminationCondition"@en ;
+    rdfs:domain ex:ContractTermination ;
+    rdfs:range ex:RegistrationRecord .
+
+ex:hasDocumentVerification a owl:ObjectProperty ;
+    rdfs:label "has Document Verification",
+        "لديه تحقق من الوثائق",
+        "لديه تحقق من الوثائق"@ar,
+        "hasDocumentVerification"@en .
+
+ex:hasDocumentation a owl:ObjectProperty ;
+    rdfs:label "has Documentation",
+        "لديه وثائق",
+        "hasDocumentation"@en .
+
+ex:hasEndTime a owl:DatatypeProperty ;
+    rdfs:label "has End Time",
+        "لديه تاريخ انتهاء",
+        "hasEndTime"@en ;
+    rdfs:domain ex:DailyLogState ;
+    rdfs:range xsd:dateTime .
+
+ex:hasExaminerRecord a owl:ObjectProperty ;
+    rdfs:label "has examiner record",
+        "له سجل فاحص",
+        "has examiner record"@en .
+
+ex:hasExemptionFromClearance a owl:ObjectProperty ;
+    rdfs:label "has Exemption from Clearance",
+        "له إعفاء من شهادة في رفع اليد",
+        "hasExemptionFromClearance"@en ;
+    rdfs:domain ex:Validator ;
+    rdfs:range ex:ExemptionFromClearanceDocument .
+
+ex:hasLandRegistrationContractDetails a owl:ObjectProperty ;
+    rdfs:label "has Land Registration Contract Details",
+        "لديه تفاصيل عقد تسجيل الأراضي",
+        "has Land Registration Contract Details"@en .
+
+ex:hasLandRegistrationDate a owl:DatatypeProperty ;
+    rdfs:label "has Land Registration Date",
+        "لديه تاريخ تسجيل الأراضي",
+        "hasLandRegistrationDate"@en .
+
+ex:hasLandRegistrationNumber a owl:DatatypeProperty ;
+    rdfs:label "has Land Registration Number",
+        "لديه رقم تسجيل الأراضي",
+        "has Land Registration Number"@en .
+
+ex:hasOfficialDocument a owl:ObjectProperty ;
+    rdfs:label "has Official Document",
+        "لديه وثيقة رسمية",
+        "has Official Document"@en .
+
+ex:hasOfficialIdentificationDocument a owl:ObjectProperty ;
+    rdfs:label "has Official Identification Document",
+        "لديه وثيقة تعريف رسمية",
+        "لديه وثيقة تعريف رسمية"@ar,
+        "hasOfficialIdentificationDocument"@en ;
+    ex:domain ex:Reviewer ;
+    ex:range ex:OfficialIdentificationDocument .
+
+ex:hasOfficialSignature a owl:ObjectProperty ;
+    rdfs:label "Has Official Signature",
+        "has official signature",
+        "لها إمضاء رسمي",
+        "يتضمن إمضاء رسمي",
+        "يتضمن إمضاء رسمي"@ar,
+        "hasOfficialSignature"@en ;
+    ex:domain ex:OfficialIdentificationDocument ;
+    ex:range ex:OfficialSignature .
+
+ex:hasOfficialStamp a owl:ObjectProperty ;
+    rdfs:label "Has Official Stamp",
+        "لها طابع رسمي",
+        "لها طابع رسمي"@ar,
+        "hasOfficialStamp"@en .
+
+ex:hasOfficialStatus a owl:ObjectProperty ;
+    rdfs:label "has Official Status",
+        "له صبغة رسمية",
+        "له صبغة رسمية"@ar,
+        "hasOfficialStatus"@en .
+
+ex:hasProperty a owl:ObjectProperty ;
+    rdfs:label "has Property",
+        "لديه ملكية",
+        "لديه ملكية"@ar,
+        "hasProperty"@en .
+
+ex:hasRecordStamping a owl:ObjectProperty ;
+    rdfs:label "has Record Stamping",
+        "لديه ختم السجل",
+        "has Record Stamping"@en .
+
+ex:hasRegistrationDate a owl:DatatypeProperty ;
+    rdfs:label "has Registration Date",
+        "لديه تاريخ التسجيل",
+        "hasRegistrationDate"@en .
+
+ex:hasRegistrationDetails a owl:ObjectProperty ;
+    rdfs:label "has Registration Details",
+        "لديه تفاصيل الترسيم",
+        "لديه تفاصيل الترسيم"@ar,
+        "hasRegistrationDetails"@en .
+
+ex:hasRegistrationNumber a owl:DatatypeProperty ;
+    rdfs:label "has Registration Number",
+        "لديه رقم التسجيل",
+        "hasRegistrationNumber"@en .
+
+ex:hasRegistrationRecord a owl:ObjectProperty ;
+    rdfs:label "has Registration Record",
+        "لديه سجل تسجيل",
+        "له سجل تسجيل",
+        "له سجل عقاري",
+        "hasRegistrationRecord"@en ;
+    ex:range ex:RegistrationRecord ;
+    rdfs:domain ex:PropertyTransfer,
+        ex:Validator ;
+    rdfs:range ex:RegistrationRecord .
+
+ex:hasRepresentation a owl:ObjectProperty ;
+    rdfs:label "has Representation",
+        "لديه تمثيل",
+        "لديه تمثيل"@ar,
+        "hasRepresentation"@en .
+
+ex:hasRequiresCentralBankLicense a owl:ObjectProperty ;
+    rdfs:label "has Requires Central Bank License",
+        "لديه يتطلب رخصة من البنك المركزي",
+        "has Requires Central Bank License"@en ;
+    rdfs:domain ex:RegistrationRecord ;
+    rdfs:range ex:RequiresCentralBankLicense .
+
+ex:hasReviewerRecord a owl:ObjectProperty ;
+    rdfs:label "has Reviewer Record",
+        "لديه سجل المراجع",
+        "hasReviewerRecord"@en ;
+    ex:domain ex:Reviewer .
+
+ex:hasSignature a owl:ObjectProperty ;
+    rdfs:label "Has Signature",
+        "لها إمضاء",
+        "hasSignature"@en .
+
+ex:hasSignatureAuthority a owl:ObjectProperty ;
+    rdfs:label "has Signature Authority",
+        "لها سلطة الإمضاء",
+        "has Signature Authority"@en ;
+    rdfs:domain ex:OfficialDocument ;
+    rdfs:range ex:SignatureAuthority .
+
+ex:hasSignatureReadingReport a owl:ObjectProperty ;
+    rdfs:label "Has Signature Reading Report",
+        "لديه محضر تلاوة التوقيع",
+        "hasSignatureReadingReport"@en .
+
+ex:hasStartTime a owl:DatatypeProperty ;
+    rdfs:label "has start time",
+        "hasStartTime"@en ;
+    ex:domain ex:DailyLogState ;
+    ex:range ex:dateTime ;
+    ex:type ex:DatatypeProperty ;
+    rdfs:domain ex:DailyLogState,
+        ex:LegalDocument ;
+    rdfs:range xsd:dateTime .
+
+ex:hasType a owl:ObjectProperty ;
+    rdfs:label "has type",
+        "له نوع",
+        "له نوع"@ar,
+        "hasType"@en .
+
+ex:hasVerificationStage a owl:ObjectProperty ;
+    rdfs:label "has Verification Stage",
+        "له مرحلة تحقيق",
+        "hasVerificationStage"@en .
+
+ex:hasWaiveOfRightCertificate a owl:ObjectProperty ;
+    rdfs:label "has Waive of Right Certificate",
+        "لديه شهادة في رفع اليد",
+        "has Waive of Right Certificate"@en ;
+    rdfs:domain ex:RegistrationRecord ;
+    rdfs:range ex:WaiveOfRightCertificate .
+
+ex:hasWitness a owl:ObjectProperty ;
+    rdfs:label "Has Witness",
+        "has Witness",
+        "لديه شاهد",
+        "له شاهد",
+        "has Witness"@en ;
+    ex:domain ex:SignatureVerificationProcedure ;
+    ex:range ex:Witness .
+
+ex:identifySignatures a owl:ObjectProperty ;
+    rdfs:label "Identify Signatures",
+        "التعريف بالإمضاءات",
+        "التعريف بالإمضاءات"@ar,
+        "identifySignatures"@en ;
+    rdfs:domain ex:AuthorizedParty ;
+    rdfs:range ex:LandTitle .
+
+ex:isConsideredMissing a owl:ObjectProperty ;
+    rdfs:label "is Considered Missing",
+        "يعتبر مفقودا",
+        "is Considered Missing"@en ;
+    rdfs:domain ex:MissingPerson ;
+    rdfs:range ex:MissingPerson .
+
+ex:isExemptFromLicense a owl:ObjectProperty ;
+    rdfs:label "is Exempt from License",
+        "غير خاضعة لترخيص",
+        "isExemptFromLicense"@en ;
+    rdfs:domain ex:PropertyTransferContract ;
+    rdfs:range ex:LicensingAuthority .
+
+ex:isExemptedFromRegistration a owl:ObjectProperty ;
+    rdfs:label "is exempted from registration",
+        "is exempted from registration"@en ;
+    rdfs:domain ex:LegalDocument ;
+    rdfs:range ex:ContractRegistration .
+
+ex:isIdentifiedBy a owl:ObjectProperty ;
+    rdfs:label "is identified by",
+        "يتم التعريف بواسطة",
+        "is identified by"@en ;
+    ex:coreComponentOf ex:RegistrationDailyLog ;
+    ex:domain ex:DailyLogState,
+        ex:RegistrationRecord ;
+    ex:range ex:OfficialIdentificationDocument,
+        ex:SignatureIdentificationDocument .
+
+ex:isInvalid a owl:ObjectProperty ;
+    rdfs:label "is Invalid",
+        "يكون باطلاً",
+        "isInvalid"@en ;
+    rdfs:domain ex:HandwrittenSaleContract ;
+    rdfs:range ex:InvalidityReason .
+
+ex:manages a owl:ObjectProperty ;
+    rdfs:label "manages",
+        "يتولى",
+        "manages"@en ;
+    rdfs:domain ex:OrderDailyLogManagement ;
+    rdfs:range ex:OrderDailyLog .
+
+ex:nationalLandOffice a owl:Class ;
+    rdfs:label "National Land Office",
+        "الديوان الوطني للملكية العقارية",
+        "الديوان الوطني للملكية العقارية"@ar,
+        "nationalLandOffice"@en .
+
+ex:performsSignatureVerification a owl:ObjectProperty ;
+    rdfs:label "performs Signature Verification",
+        "يقوم بالتحقق من الإمضاء",
+        "performs Signature Verification"@en ;
+    ex:domain ex:Validator ;
+    ex:range ex:SignatureVerificationProcedure .
+
+ex:produces a owl:Class ;
+    rdfs:label "produces"@en ;
+    ex:range ex:RegistrationRecord .
+
+ex:recordedInLandRegistry a owl:ObjectProperty ;
+    rdfs:label "recorded in Land Registry",
+        "مسجل في السجل العقاري",
+        "recordedInLandRegistry"@en .
+
+ex:regionalDirector a owl:Class ;
+    rdfs:label "Regional Director",
+        "المدير الجهوي",
+        "Regional Director"@en .
+
+ex:requiresIdentification a owl:ObjectProperty ;
+    rdfs:label "requires Identification",
+        "يتطلب التعريف",
+        "requiresIdentification"@en ;
+    ex:domain ex:RealEstateTransaction ;
+    ex:range ex:ContractingPartyIdentification .
+
+ex:requiresLegalProcedures a owl:ObjectProperty ;
+    rdfs:label "requires Legal Procedures",
+        "يتطلب إجراءات قانونية",
+        "requires Legal Procedures"@en ;
+    rdfs:domain ex:PropertyRegimeChange ;
+    rdfs:range ex:PropertyRegimeChange .
+
+ex:resultsFrom a owl:ObjectProperty ;
+    rdfs:label "results from",
+        "ينتج عن",
+        "ينتج عن"@ar,
+        "resultsFrom"@en ;
+    ex:domain ex:RealEstateTransaction ;
+    ex:range ex:RegistrationRecord .
+
+ex:reviewedBy a owl:ObjectProperty ;
+    rdfs:label "Reviewed by",
+        "تمت مراجعته بواسطة",
+        "Reviewed by"@en .
+
+ex:signedBy a owl:ObjectProperty ;
+    rdfs:label "signed by",
+        "موقعة من قبل",
+        "signed by"@en ;
+    ex:domain ex:OfficialDocument ;
+    ex:range ex:Signatory .
+
+ex:stateOf a owl:ObjectProperty ;
+    rdfs:label "state of",
+        "حالة",
+        "stateOf"@en ;
+    ex:domain ex:DailyLogState ;
+    ex:range ex:RegistryDailyLog ;
+    ex:type ex:ObjectProperty .
+
+ex:updateCertificate a owl:Class ;
+    rdfs:label "updateCertificate"@en ;
+    ex:domain ex:RegistrationRecord .
+
+ex:verifiedBy a owl:ObjectProperty ;
+    rdfs:label "verified by",
+        "تم التحقق منها بواسطة",
+        "تم التحقق منها من قبل",
+        "verifiedBy"@en ;
+    ex:domain ex:OfficialDocument,
+        ex:RegistrationApplication ;
+    ex:range ex:Reviewer,
+        ex:Validator .
+
+ex:verifyApostilleOrigin a owl:ObjectProperty ;
+    rdfs:label "Verify Apostille Origin",
+        "تحقق مصدر الأبوستي",
+        "تحقق مصدر الأبوستي"@ar,
+        "verifyApostilleOrigin"@en ;
+    ex:domain ex:ApostilleVerification ;
+    ex:range ex:Apostille .
+
+ex:verifyApplicationData a owl:ObjectProperty ;
+    rdfs:label "verify application data",
+        "verify application data"@en ;
+    ex:range ex:ServiceApplication .
+
+ex:verifyDocumentData a owl:ObjectProperty ;
+    rdfs:label "verify document data",
+        "verifyDocumentData"@en ;
+    ex:range ex:ServiceApplication .
+
+ex:verifyDocumentType a owl:ObjectProperty ;
+    rdfs:label "Verify Document Type",
+        "تحقق نوع الوثيقة",
+        "Verify Document Type"@en ;
+    ex:domain ex:ApostilleVerification ;
+    ex:range ex:RegistrationDocument .
+
+ex:verifyOfficialStatus a owl:ObjectProperty ;
+    rdfs:label "Verify Official Status",
+        "التأكد من الصبغة الرسمية",
+        "التثبت من الصبغة الرسمية",
+        "verifyOfficialStatus"@en ;
+    ex:domain ex:Examiner ;
+    ex:range ex:OfficialDocument ;
+    rdfs:domain ex:LandRegistrationApplication ;
+    rdfs:range ex:OfficialIdentificationDocument .
+
+ex:verifyOwnershipDocuments a owl:ObjectProperty ;
+    rdfs:label "Verify Ownership Documents",
+        "التثبت من إحداث سندات الملكية",
+        "Verify Ownership Documents"@en .
+
+ex:verifyRecordIdentifier a owl:DatatypeProperty ;
+    rdfs:label "verify record identifier",
+        "verify record identifier"@ar,
+        "verifyRecordIdentifier"@en ;
+    ex:range ex:ServiceApplication .
+
+ns1:Examiner a owl:Class ;
+    rdfs:label "Examiner"@en ;
+    ns1:type ns1:Class .
+
+ns1:LandTitle a owl:Class ;
+    rdfs:label "LandTitle"@en ;
+    ns1:type ns1:Class .
+
+ns1:Reviewer a owl:Class ;
+    rdfs:label "Reviewer"@en ;
+    ns1:type ns1:Class .
+
+ex:Apostille a owl:Class ;
+    rdfs:label "Apostille",
+        "الأبوستي",
+        "Apostille"@en .
+
+ex:ApostilleStamp a owl:Class ;
+    rdfs:label "Apostille Stamp",
+        "ختم الأبوستي",
+        "ApostilleStamp"@en ;
+    rdfs:comment "الختم الأصلي للأبوستي وليس صورة ضوئية" .
+
+ex:ApprovalOfOrderDailyLog a owl:Class ;
+    rdfs:label "Approval of Order Daily Log",
+        "إعتماد سجل اليومي للرهون",
+        "Approval of Order Daily Log"@en .
+
+ex:AuthorizedEntity a owl:Class ;
+    rdfs:label "Authorized Entity",
+        "الجهة المصدرة",
+        "AuthorizedEntity"@en .
+
+ex:CancellationCondition a owl:Class ;
+    rdfs:label "Cancellation Condition",
+        "الشرط الفسخي",
+        "الشرط الفسخي"@ar,
+        "CancellationCondition"@en ;
+    ex:cancelledBasedOnClearanceDocument "n934c7a3adcdf445b82673ac0400b98d0b2" ;
+    rdfs:comment "الشرط الفسخي الوارد في العقود المذكورة بالسجل العقاري والذي يتم التشطيب عليه استنادًا إلى شهادة رفع اليد الصادرة عن الوكالة العقارية الصناعية." .
+
+ex:ClosureOfRegistrationDailyLog a owl:Class ;
+    rdfs:label "Closure of Registration Daily Log",
+        "ختم يومية الرهون",
+        "Closure of Registration Daily Log"@en ;
+    rdfs:comment "الخطوات المتبعة في ختم يومية الرهون في السجل العقاري" .
+
+ex:ContractRegistration a owl:Class ;
+    rdfs:label "Contract Registration",
+        "ContractRegistration"@en ;
+    rdfs:comment "Cases where contract or legal document registration in the land registry is exempted" .
+
+ex:ContractRegistrationException a owl:Class ;
+    rdfs:label "Contract Registration Exceptions",
+        "استثناءات على إشهار العقود",
+        "استثناءات على إشهار العقود"@ar,
+        "ContractRegistrationException"@en ;
+    rdfs:comment "الاستثناءات على قاعدة إشهار العقود والوثائق القانونية في السجل العقاري" .
+
+ex:ContractStartTime a owl:Class ;
+    rdfs:label "Contract Start Time",
+        "وقت بدء سريان العقد",
+        "Contract Start Time"@en ;
+    rdfs:comment "وقت بدء سريان العقد أو الوثيقة القانونية" .
+
+ex:ContractTermination a owl:Class ;
+    rdfs:label "Contract Termination",
+        "فسخ العقود",
+        "Contract Termination"@en ;
+    rdfs:comment "الشروط المنصوص عليها في السجل العقاري لفسخ العقود المذكورة لفائدة الوكالة العقارية الصناعية" .
+
+ex:ContractingParty a owl:Class ;
+    rdfs:label "Contracting Party",
+        "الطرف المتعاقد",
+        "Contracting Party"@en .
+
+ex:ContractingPartyIdentification a owl:Class ;
+    rdfs:label "Contracting Party Identification",
+        "تعريف الأطراف المتعاقدة",
+        "ContractingPartyIdentification"@en ;
+    rdfs:comment "الإجراءات القانونية المطلوبة للتعريف بإمضاءات الأطراف المتعاقدة في عملية البيع العقاري" .
+
+ex:DocumentVerification a owl:Class ;
+    rdfs:label "Document Verification",
+        "تحقق من الوثائق",
+        "DocumentVerification"@en .
+
+ex:ExemptionFromClearanceDocument a owl:Class ;
+    rdfs:label "Exemption from Clearance Certificate",
+        "إعفاء من شهادة في رفع اليد",
+        "ExemptionFromClearanceDocument"@en ;
+    rdfs:comment "الصور التي تعفى فيها عملية التفويت في المقاسم المقتناة من الوكالة العقارية الصناعية من الإدلاء بشهادة في رفع اليد" .
+
+ex:Extractions a owl:Class ;
+    rdfs:label "Extractions",
+        "الإستخراجات",
+        "Extractions"@en .
+
+ex:FullOwnership a owl:Class ;
+    rdfs:label "Full Ownership",
+        "الملكية الكاملة",
+        "الملكية الكاملة"@ar,
+        "FullOwnership"@en .
+
+ex:HandwrittenSaleContract a owl:Class ;
+    rdfs:label "Handwritten Sale Contract",
+        "عقد البيع بخط اليد",
+        "HandwrittenSaleContract"@en ;
+    rdfs:comment "عقد البيع الذي يتم بخط اليد" .
+
+ex:IssuerAuthority a owl:Class ;
+    rdfs:label "Issuing Authority",
+        "الجهة المصدرة",
+        "IssuerAuthority"@en .
+
+ex:JudicialAuthority a owl:Class ;
+    rdfs:label "Judicial Authority",
+        "الهيئة القضائية",
+        "الهيئة القضائية"@ar,
+        "JudicialAuthority"@en ;
+    rdfs:comment "الهيئة القضائية المخولة بالمصادقة على شهادات الملكية" .
+
+ex:JudicialDocument a owl:Class ;
+    rdfs:label "Judicial Document",
+        "الوثيقة القضائية",
+        "JudicialDocument"@en ;
+    rdfs:subClassOf ex:OfficialDocument .
+
+ex:LandRegistration a owl:Class ;
+    rdfs:label "Land Registration",
+        "الترسيم في السجل العقاري",
+        "LandRegistration"@en ;
+    ex:composedOf ex:RealEstate .
+
+ex:LandRegistrationApplication a owl:Class ;
+    rdfs:label "Land Registration Application",
+        "مطلب الترسيم",
+        "مطلب الترسيم"@ar,
+        "LandRegistrationApplication"@en .
+
+ex:LandRegistrationContractDetails a owl:Class ;
+    rdfs:label "Land Registration Contract Details",
+        "تفاصيل عقد تسجيل الأراضي",
+        "LandRegistrationContractDetails"@en .
+
+ex:LandTitleCopy a owl:Class ;
+    rdfs:label "Land Title Copy",
+        "نسخة سند الملكية",
+        "LandTitleCopy"@en ;
+    ex:recordedInLandRegistry ex:CancellationCondition .
+
+ex:NormalOperations a owl:Class ;
+    rdfs:label "Normal Operations",
+        "العمليات العادية",
+        "العمليات العادية"@ar,
+        "NormalOperations"@en .
+
+ex:OfficialSignature a owl:Class ;
+    rdfs:label "Official Signature",
+        "الإمضاء الرسمي",
+        "Official Signature"@en .
+
+ex:OrderDailyLog a owl:Class ;
+    rdfs:label "Mortgage Daily Log",
+        "يومية الرهون",
+        "يومية الرهون"@ar,
+        "OrderDailyLog"@en ;
+    rdfs:subClassOf ex:DailyLogState .
+
+ex:OrderDailyLogManagement a owl:Class ;
+    rdfs:label "Management of Mortgage Daily Log",
+        "إدارة يومية الرهون",
+        "إدارة يومية الرهون"@ar,
+        "OrderDailyLogManagement"@en ;
+    rdfs:comment "الإجراءات التي يتولاها المدير الجهوي أو من ينوبه فيما يتعلق بيومية الرهون" .
+
+ex:OwnershipCertificate a owl:Class ;
+    rdfs:label "Ownership Certificate",
+        "شهادة الملكية",
+        "Ownership Certificate"@en .
+
+ex:PartiallyDividedRealEstate a owl:Class ;
+    rdfs:label "Partially Divided Real Estate",
+        "العقار المفرز أو على الشياع",
+        "PartiallyDividedRealEstate"@en ;
+    rdfs:comment "العقار الذي يتكون من أجزاء مفرزة أو على الشياع" .
+
+ex:PropertyTransferContract a owl:Class ;
+    rdfs:label "Property Transfer Contract",
+        "عقود التفويت أو توظيف الحقوق العينية",
+        "PropertyTransferContract"@en ;
+    rdfs:comment "عقود نقل ملكية الحقوق العينية الصادرة عن مقتني المقاسم من الوكالة العقارية للسكنى" .
+
+ex:RealEstate a owl:Class ;
+    rdfs:label "Real Estate",
+        "العقار",
+        "العقار"@ar,
+        "RealEstate"@en ;
+    ex:composedOf ex:FullOwnership .
+
+ex:RecordStamping a owl:Class ;
+    rdfs:label "Record Stamping",
+        "ختم السجل",
+        "RecordStamping"@en .
+
+ex:RegistrationAuthority a owl:Class ;
+    rdfs:label "Registration Authority",
+        "السلطة المصدرة للوثيقة",
+        "Registration Authority"@en .
+
+ex:RegistrationDailyLogReview a owl:Class ;
+    rdfs:label "Registration Daily Log Review",
+        "يومية مراجعة الرهون",
+        "RegistrationDailyLogReview"@en ;
+    ex:domain ex:RegistrationDailyLog ;
+    rdfs:comment "الإجراءات التي يقوم بها المدير الجهوي أو من ينوبه فيما يتعلق بيومية الرهون" .
+
+ex:RegistrationDate a owl:DatatypeProperty ;
+    rdfs:label "Registration Date",
+        "تاريخ الترسيم",
+        "RegistrationDate"@en ;
+    rdfs:comment "التاريخ الذي يجب أن يتم فيه ترسيم عقد البيع على السجل العقاري",
+        "التاريخ الذي يجب أن يتم فيه ترسيم عقد البيع على السجل العقاري وفقًا للتشريع التونسي" ;
+    rdfs:domain ex:SaleContract ;
+    rdfs:range ex:dateTime,
+        xsd:date .
+
+ex:RegistrationDetails a owl:Class ;
+    rdfs:label "Registration Details",
+        "تفاصيل الترسيم",
+        "تفاصيل الترسيم"@ar,
+        "RegistrationDetails"@en .
+
+ex:RegistrationDocument a owl:Class ;
+    rdfs:label "Registration Document",
+        "وثيقة الترسيم",
+        "وثيقة الترسيم"@ar,
+        "RegistrationDocument"@en .
+
+ex:RegistrationRequest a owl:Class ;
+    rdfs:label "Registration Request",
+        "طلب الترسيم",
+        "Registration Request"@en .
+
+ex:RegistryDailyLog a owl:Class ;
+    rdfs:label "RegistryDailyLog"@en ;
+    rdfs:subClassOf "n934c7a3adcdf445b82673ac0400b98d0b3",
+        "n934c7a3adcdf445b82673ac0400b98d0b4" .
+
+ex:RequiresCentralBankLicense a owl:Class ;
+    rdfs:label "Requires Central Bank License",
+        "يتطلب الحصول على رخصة من البنك المركزي",
+        "RequiresCentralBankLicense"@en ;
+    rdfs:comment "الشروط التي تتطلب الحصول على رخصة من البنك المركزي عند تفويت عقار مقتنى من الوكالة العقارية الصناعية",
+        "يتطلب الحصول على رخصة من البنك المركزي عند تفويت عقار مقتنى من الوكالة العقارية الصناعية" ;
+    rdfs:subClassOf ex:PropertyTransfer .
+
+ex:Signatory a owl:Class ;
+    rdfs:label "Signatory",
+        "الموقع",
+        "Signatory"@en .
+
+ex:SignatureAuthority a owl:Class ;
+    rdfs:label "Signature Authority",
+        "سلطة الإمضاء",
+        "SignatureAuthority"@en .
+
+ex:SignatureIdentificationDocument a owl:Class ;
+    rdfs:label "Signature Identification Document",
+        "وثيقة تعريف بالإمضاء",
+        "وثيقة تعريف بالإمضاء"@ar,
+        "SignatureIdentificationDocument"@en ;
+    rdfs:comment "الوثائق الرسمية المعتمدة للتعريف بالإمضاء حسب القرار عدد 1968 لسنة 1994" .
+
+ex:WaiveOfRightCertificate a owl:Class ;
+    rdfs:label "Waive of Right Certificate",
+        "شهادة في رفع اليد",
+        "WaiveOfRightCertificate"@en ;
+    rdfs:comment "شهادة في رفع اليد صادرة عن الوكالة العقارية الصناعية" .
+
+ex:Witness a owl:Class ;
+    rdfs:label "Witness",
+        "شاهد",
+        "Witness"@en ;
+    rdfs:comment "شاهد يحسن الإمضاء ويتمتع بأهلية التعاقد",
+        "شخص يحسن الإمضاء ويتمتع بأهلية التعاقد، والذي يشهد على تلاوة نص الوثيقة على الطرف المعني بالإمضاء." .
+
+ex:approveRegistrationDailyLog a owl:ObjectProperty ;
+    rdfs:label "Approve Registration Daily Log",
+        "المصادقة على ختم اليومية",
+        "Approve Registration Daily Log"@en .
+
+ex:extractions a owl:Class ;
+    rdfs:label "Extractions",
+        "Extractions"@en ;
+    rdfs:subClassOf ex:LogFolder .
+
+ex:mortgagesAndAttachments a owl:Class ;
+    rdfs:label "Mortgages and Attachments",
+        "mortgagesAndAttachments"@en ;
+    rdfs:subClassOf ex:LogFolder .
+
+ex:registryKeeper a owl:Class ;
+    rdfs:label "Registry Keeper",
+        "حافظ الملكية العقارية",
+        "حافظ الملكية العقارية"@ar,
+        "registryKeeper"@en .
+
+ex:regularOperations a owl:Class ;
+    rdfs:label "Regular Operations",
+        "regularOperations"@en ;
+    rdfs:subClassOf ex:LogFolder .
+
+ns1:RealEstateTransaction a owl:Class ;
+    rdfs:label "RealEstateTransaction"@en ;
+    ns1:type ns1:Class .
+
+ns1:RegistrationDailyLog a owl:Class ;
+    rdfs:label "RegistrationDailyLog"@en ;
+    ns1:subClassOf ns1:DailyLogState ;
+    ns1:type ns1:Class .
+
+ns1:Validator a owl:Class ;
+    rdfs:label "Validator"@en ;
+    ns1:type ns1:Class .
+
+ex:LandTitle a owl:Class ;
+    rdfs:label "Land Title",
+        "سند الملكية العقارية",
+        "LandTitle"@en .
+
+ex:LegalDocument a owl:Class ;
+    rdfs:label "Legal Document",
+        "Legal Document"@en .
+
+ex:MissingPerson a owl:Class ;
+    rdfs:label "Missing Person",
+        "مفقود",
+        "MissingPerson"@en ;
+    rdfs:comment "شخص انقطع خبره ولا يمكن الكشف عنه حيا" .
+
+ex:Mortgages a owl:Class ;
+    rdfs:label "Mortgages",
+        "الرهون",
+        "Mortgages"@en .
+
+ex:PropertyRegimeChange a owl:Class ;
+    rdfs:label "Property Regime Change",
+        "تغيير نظام الأملاك",
+        "PropertyRegimeChange"@en ;
+    rdfs:comment "الإجراءات القانونية المطلوبة لتغيير نظام الأملاك بين الزوجين من نظام الاشتراك إلى نظام التفريق" .
+
+ex:PropertyTransfer a owl:Class ;
+    rdfs:label "Property Transfer",
+        "تفويت العقار",
+        "تفويت العقار"@ar,
+        "PropertyTransfer"@en .
+
+ex:ReceiptDailyLog a owl:Class ;
+    rdfs:label "Receipt Daily Log",
+        "سجل اليومي للاستلام",
+        "يومية الرهون",
+        "ReceiptDailyLog"@en ;
+    ex:handleRegistrationRequest ex:AcceptedRegistrationRequest,
+        ex:RejectedRegistrationRequest ;
+    rdfs:subClassOf ex:DailyLogState .
+
+ex:SaleContract a owl:Class ;
+    rdfs:label "Sale Contract",
+        "عقد البيع",
+        "Sale Contract"@en .
+
+ex:SignatureVerificationProcedure a owl:Class ;
+    rdfs:label "Signature Verification Procedure",
+        "إجراء التحقق من الإمضاء",
+        "SignatureVerificationProcedure"@en ;
+    rdfs:comment "الإجراءات القانونية اللازمة للتحقق من هوية الشخص المعني بالإمضاء وفهمه لمحتوى الوثيقة المراد إمضاؤها." .
+
+ex:hasDate a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Date",
+        "has Date",
+        "تاريخ",
+        "له تاريخ",
+        "has Date"@en ;
+    rdfs:domain ex:SaleContract ;
+    rdfs:range ex:RegistrationDate,
+        xsd:dateTime .
+
+ex:issuedBy a owl:ObjectProperty ;
+    rdfs:label "Issued By",
+        "issued by",
+        "صادرة عن",
+        "issuedBy"@en ;
+    ex:domain ex:OfficialDocument,
+        ex:OfficialIdentificationDocument ;
+    ex:range ex:AdministrativeAuthority,
+        ex:AuthorizedEntity,
+        ex:IssuerAuthority .
+
+ns1:RegistrationApplication a owl:Class ;
+    rdfs:label "RegistrationApplication"@en ;
+    ns1:type ns1:Class .
+
+ns1:RegistrationRecord a owl:Class ;
+    rdfs:label "RegistrationRecord"@en ;
+    ns1:type ns1:Class .
+
+ex:AcceptedRegistrationRequest a owl:Class ;
+    rdfs:label "Accepted Registration Request",
+        "طلب ترسيم مقبول",
+        "AcceptedRegistrationRequest"@en ;
+    rdfs:comment "طلب الترسيم الذي تم قبوله من طرف المدير الجهوي أو من ينوبه.",
+        "طلب الترسيم الذي تمت الموافقة عليه من طرف المدير الجهوي أو من ينوبه",
+        "طلب الترسيم الذي تمت الموافقة عليه من قبل المدير الجهوي أو من ينوبه.",
+        "طلب ترسيم تم قبوله من قبل المدير الجهوي أو من ينوبه" .
+
+ex:ApostilleVerification a owl:Class ;
+    rdfs:label "Apostille Verification",
+        "تحقق الأبوستي",
+        "تحقق الأبوستي"@ar,
+        "ApostilleVerification"@en ;
+    rdfs:comment "التحقق من الشروط اللازمة لصحة إجراء الأبوستي على الوثائق المقدمة للترسيم" .
+
+ex:AuthorizedParty a owl:Class ;
+    rdfs:label "Authorized Parties",
+        "Authorized Party",
+        "الجهات المخولة",
+        "الجهة المخوّلة",
+        "AuthorizedParty"@en ;
+    rdfs:comment "الجهات المخولة بالتعريف بإمضاءات الأطراف المتعاقدة في السجل العقاري",
+        "الجهات المخولة بالتعريف بإمضاءات الأطراف المتعاقدة في سندات الملكية العقارية" .
+
+ex:DailyLogDistribution a owl:Class ;
+    rdfs:label "Daily Log Distribution",
+        "توزيع المدونات اليومية",
+        "DailyLogDistribution"@en ;
+    ex:distributeLogsByFolders ex:extractions,
+        ex:mortgagesAndAttachments,
+        ex:regularOperations ;
+    rdfs:comment "الأنواع المختلفة للمدونات التي يتم توزيعها على المدير الجهوي أو من ينوبه بعد إنهاء المراجعة.",
+        "الخطوات التي يتم اتباعها من قبل المدير الجهوي أو من ينوبه عند توزيع المدوّنات حسب المجلدات (عمليات عادية، رهون وعقل واستخراجات)." .
+
+ex:RejectedRegistrationRequest a owl:Class ;
+    rdfs:label "Rejected Registration Request",
+        "طلب ترسيم مرفوض",
+        "RejectedRegistrationRequest"@en ;
+    rdfs:comment "طلب الترسيم الذي تم رفضه من طرف المدير الجهوي أو من ينوبه",
+        "طلب الترسيم الذي تم رفضه من طرف المدير الجهوي أو من ينوبه.",
+        "طلب الترسيم الذي تم رفضه من قبل المدير الجهوي أو من ينوبه.",
+        "طلب ترسيم تم رفضه من قبل المدير الجهوي أو من ينوبه" .
+
+ex:ServiceApplication a owl:Class ;
+    rdfs:label "Service Application",
+        "Service Application"@en .
+
+ex:LogFolder a owl:Class ;
+    rdfs:label "Log Folder",
+        "Log Folder"@en .
+
+ex:RealEstateTransaction a owl:Class ;
+    rdfs:label "Real Estate Transaction",
+        "المعاملة العقارية",
+        "Real Estate Transaction"@en .
+
+ex:AdministrativeAuthority a owl:Class ;
+    rdfs:label "Administrative Authorities",
+        "Administrative Authority",
+        "السلطة الإدارية",
+        "الهيئات الإدارية",
+        "الهيئة الإدارية",
+        "AdministrativeAuthority"@en ;
+    rdfs:comment "الهيئة الإدارية المخولة بالمصادقة على شهادات الملكية" .
+
+ex:RegistrationApplication a owl:Class ;
+    rdfs:label "Registration Application",
+        "طلب الترسيم",
+        "طلب التسجيل",
+        "RegistrationApplication"@en ;
+    rdfs:comment "المعلومات الأساسية التي يجب أن يتضمنها طلب التسجيل وفقًا للفصل 377 (مكرر) من المجلة العقارية" .
+
+ex:Reviewer a owl:Class ;
+    rdfs:label "Reviewer",
+        "الجهة المراجعة",
+        "المراجع",
+        "Reviewer"@en .
+
+ex:Validator a owl:Class ;
+    rdfs:label "Validator",
+        "المصادق",
+        "Validator"@en .
+
+ex:OfficialIdentificationDocument a owl:Class ;
+    rdfs:label "Official Identification Document",
+        "Official Identification Documents",
+        "الوثائق الرسمية المعتمدة للتعريف بالإمضاء",
+        "الوثيقة الرسمية المعتمدة للتعريف بالإمضاء",
+        "OfficialIdentificationDocument"@en ;
+    rdfs:comment "الوثائق الرسمية التي يجب التثبت من صبغتها الرسمية عند ترسيم عملية عقارية",
+        "الوثائق الرسمية التي يجب على المحقق التثبت من صبغتها الرسمية عند ترسيم العقارات",
+        "الوثائق الرسمية التي يجب على المراجع التحقق منها عند ترسيم عقار",
+        "الوثائق الرسمية المعتمدة للتعريف بالإمضاء التي يجب أن تتحقق منها الجهة المراجعة عند ترسيم العقارات",
+        "الوثائق الرسمية المعتمدة للتعريف بالإمضاء والتي يجب التأكد من صبغتها الرسمية عند ترسيم عقار",
+        "الوثائق الرسمية المعتمدة للتعريف بالإمضاء والتي يجب التثبت من صبغتها الرسمية عند ترسيم العقارات",
+        "الوثائق الرسمية المعتمدة للتعريف بالإمضاء والتي يجب التثبت من صبغتها الرسمية عند ترسيم عقار في السجل العقاري",
+        "الوثائق الرسمية المقدمة للترسيم والتي يجب التحقق من صبغتها الرسمية" .
+
+ex:RegionalDirector a owl:Class ;
+    rdfs:label "Regional Director",
+        "المدير الجهوي",
+        "Regional Director"@en ;
+    rdfs:comment "الشخص المسؤول عن الإجراءات المتعلقة بيومية الرهون" .
+
+ex:RegistrationDailyLog a owl:Class ;
+    rdfs:label "Registration Daily Log",
+        "يومية الترسيم",
+        "RegistrationDailyLog"@en ;
+    ex:coreComponentOf ex:RegistrationDailyLogReview ;
+    rdfs:subClassOf ex:DailyLogState .
+
+ns1:DailyLogState a owl:Class ;
+    rdfs:label "DailyLogState"@en ;
+    ns1:type ns1:Class .
+
+ex:RegistrationRecord a owl:Class ;
+    rdfs:label "Registration Record",
+        "السجل العقاري",
+        "السجل العقاري"@ar,
+        "RegistrationRecord"@en .
+
+ex:DailyLogState a owl:Class ;
+    rdfs:label "Daily Log State",
+        "حالة يومية الترسيم",
+        "Daily Log State"@en .
+
+ex:OfficialDocument a owl:Class ;
+    rdfs:label "Official Document",
+        "الوثيقة الرسمية",
+        "Official Document"@en ;
+    rdfs:comment "الوثائق الرسمية التي يجب على المحقق التثبت من صبغتها الرسمية عند ترسيمها",
+        "الوثائق الرسمية المعتمدة للتعريف بالإمضاء التي يجب التثبت من صبغتها الرسمية عند ترسيم عقار",
+        "الوثائق الرسمية المعتمدة للتعريف بالإمضاء حسب النص القانوني",
+        "الوثائق الرسمية المعتمدة للتعريف بالإمضاء والتي يجب على المحقق التثبت من صبغتها الرسمية عند ترسيم عقار",
+        "الوثيقة التي تتحلى بالصبغة الرسمية من حيث الجهة المصدرة لها وإمضاء المسؤول عنها",
+        "الوثيقة التي تحمل الختم والإمضاء الرسمي للجهة المصدرة لها",
+        "الوثيقة الرسمية المعتمدة للتعريف بالإمضاء",
+        "الوثيقة الرسمية المعتمدة للتعريف بالإمضاء والتي يجب التأكد من صبغتها الرسمية عند ترسيم عقار على المحقق" ;
+    rdfs:subClassOf "n934c7a3adcdf445b82673ac0400b98d0b5",
+        "n934c7a3adcdf445b82673ac0400b98d0b6" .
+
