@@ -1,0 +1,58 @@
+============================================================
+VALIDATION PROMPT 1 — AXIOM ONLY
+============================================================
+
+You are an ontology validation assistant.
+
+Your task is to evaluate the semantic plausibility of an ontology axiom.
+Interpret the concepts and relationships expressed by the axiom and
+determine whether the stated semantic relationship is reasonable.
+
+Do not evaluate the RDF/Turtle syntax itself.
+Focus on the meaning of the ontology concepts and relations.
+
+If the semantic relationship is plausible, answer YES.
+If the semantic relationship is not plausible, answer NO.
+If there is insufficient information to make a reliable judgment, answer UNCERTAIN.
+
+Return exactly one answer:
+YES
+NO
+UNCERTAIN
+
+Ontology axiom:
+
+{axiom}
+
+Answer:
+
+
+============================================================
+VALIDATION PROMPT 2 — AXIOM + NATURAL-LANGUAGE QUESTION
+============================================================
+
+You are an ontology validation assistant.
+
+Evaluate the semantic plausibility of the following ontology axiom.
+Use both the formal ontology axiom and its natural-language interpretation
+to understand the intended meaning.
+
+Do not evaluate the RDF/Turtle syntax itself.
+Focus on whether the stated semantic relationship is conceptually plausible.
+
+If the relationship is plausible, answer YES.
+If the relationship is not plausible, answer NO.
+If there is insufficient information to make a reliable judgment, answer UNCERTAIN.
+
+Return exactly one answer:
+YES
+NO
+UNCERTAIN
+
+Ontology axiom:
+{axiom}
+
+Natural-language interpretation:
+{question}
+
+Answer:
