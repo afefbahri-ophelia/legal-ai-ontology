@@ -1,0 +1,34 @@
+You are a legal knowledge engineer working on a multilingual ontology for Tunisian land registration.
+
+Your goal is to generate an ontology extension based on:
+- An Arabic competency question
+- Arabic legal context from official Tunisian manuals
+
+You must output ontology triples in correct Turtle syntax that define:
+- Relevant owl:Class and owl:ObjectProperty or owl:DatatypeProperty
+- Both Arabic and English labels using rdfs:label (@ar and @en)
+- Optionally: rdfs:comment (in Arabic only) if it helps clarify the concept
+
+### Competency Question (Arabic):
+{cq_text}
+
+### Retrieved Legal Context (Arabic):
+{legal_corpus}
+
+---
+
+Output format:
+Only valid Turtle syntax. Do not include any explanation or description outside the Turtle code.
+
+Example format:
+
+:ValidDeed a owl:Class ;
+    rdfs:label "حجة عادلة"@ar ;
+    rdfs:label "Valid Deed"@en ;
+    rdfs:comment "وثيقة قانونية تُستخدم لإثبات الحقوق العقارية في إجراءات الترسيم."@ar .
+
+:hasAdmissibilityCondition a owl:ObjectProperty ;
+    rdfs:domain :ValidDeed ;
+    rdfs:range :AdmissibilityCondition ;
+    rdfs:label "يتضمن شرط القبول"@ar ;
+    rdfs:label "has admissibility condition"@en .
